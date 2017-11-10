@@ -1,11 +1,21 @@
 package com.bbn.ms.boktour;
 
+import org.springframework.beans.factory.annotation.Value;
+
 
 public class BoktourSource {
+	public static final String USERNAME_KEY = "UserName";
+	public static final String PASSWORD_KEY = "PassWord";
+
+	@Value("${boktourSource.proxyEnabled}")
 	private boolean proxyEnabled;
+	@Value("${boktourSource.proxyBaseUri}")
 	private String proxyBaseUri;
+	@Value("${boktourSource.username}")
 	private String username;
+	@Value("${boktourSource.password}")
 	private String password;
+	@Value("${boktourSource.baseUri}")
 	private String baseUri;
 
 	public BoktourSource() {

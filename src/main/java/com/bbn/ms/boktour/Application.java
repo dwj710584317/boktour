@@ -66,5 +66,11 @@ public class Application extends WebMvcConfigurerAdapter {
 	public BoktourTask task() {
 		return new BoktourTask();
 	}
+	
+	@Bean
+	public BoktourSource boktourSource() {
+		return new BoktourSource();
+	}
+	
 
 }
